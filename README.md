@@ -1,6 +1,6 @@
-# rem-demo
+# Travel demo
 
-> rem demo
+> Travel demo
 
 ## Build Setup
 
