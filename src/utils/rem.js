@@ -5,9 +5,9 @@
     const clientWidth = docEl.clientWidth
     if (!clientWidth) return
     if (clientWidth >= 640) { // 640是以phone5s的分辨率,可以自行修改
-      docEl.style.fontSize = '100px'
+      docEl.style.fontSize = '50px'
     } else {
-      docEl.style.fontSize = 100 * (clientWidth / 640) + 'px'// 同上
+      docEl.style.fontSize = 50 * (clientWidth / 640) + 'px'// 同上
     }
   }
   if (!doc.addEventListener) return
