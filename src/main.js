@@ -3,10 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import fastClick from 'fastclick'
 import '@/utils/rem'
-import './styles/index.scss'
+import '@/assets/styles/index.scss'
 
 Vue.config.productionTip = false
+fastClick.attach(document.body)// 解决移动端某些浏览器点击延迟的问题
 
 /* eslint-disable no-new */
 new Vue({
