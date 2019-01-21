@@ -17,7 +17,8 @@
 @import './reset.css';
 @import './border.css';
 @import './iconfont.css';
+@import './function.scss';
 
 body{
-    font-size:16px;
+    font-size:rem(14px);
 }

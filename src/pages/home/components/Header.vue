@@ -23,35 +23,37 @@ export default {
 @import '@/assets/styles/function.scss';
 .header{
     display: flex;
-    line-height:rem(86px);
+    line-height:rem(44px);
+    height:rem(44px);
     background: #00bcd4;
     color:#fff;
     .header-left{
-        width:rem(64px);
+        width:rem(41px);
         float:left;
         .back-icon{
-            font-size:rem(30px);
+            font-size:rem(15px);
             text-align: center;
+            font-weight: bold;
         }
     }
     .header-input{
         flex:1;
         background: #fff;
-        height:rem(64px);
-        line-height:rem(64px);
-        margin-top:rem(12px);
-        margin-left:rem(20px);
-        border-radius: rem(5px);
-        color:#ccc;
+        height:rem(30px);
+        line-height:rem(30px);
+        margin-top:rem(7px);
+        border-radius: rem(3px);
+        color:#e4e7ea;
         padding-left:rem(10px);
-        font-size:rem(24px);
+        font-size:rem(15px);
     }
     .header-right{
-        width:rem(124px);
+        width:rem(66px);
         float:right;
         text-align: center;
         .arrow-icon{
-            font-size:rem(24px);
+            margin-left:rem(2px);
+            font-size:rem(10px);
         }
     }
 }
