@@ -7,6 +7,10 @@ import fastClick from 'fastclick'
 import '@/utils/rem'
 import '@/assets/styles/index.scss'
 
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
+
 Vue.config.productionTip = false
 fastClick.attach(document.body)// 解决移动端某些浏览器点击延迟的问题
 
