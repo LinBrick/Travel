@@ -20,12 +20,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/function.scss';
+@import '@/assets/styles/global.scss';
 .header{
     display: flex;
     line-height:rem(44px);
     height:rem(44px);
-    background: #00bcd4;
+    background: $bgColor;
     color:#fff;
     .header-left{
         width:rem(41px);
