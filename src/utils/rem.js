@@ -3,7 +3,6 @@
   const resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
   const recalc = function() {
     const clientWidth = docEl.clientWidth
-    console.log(clientWidth)
     if (!clientWidth) return
     if (clientWidth >= 375) { // 640是以phone5s的分辨率,可以自行修改
       docEl.style.fontSize = '50px'
