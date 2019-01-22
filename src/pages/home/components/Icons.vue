@@ -97,7 +97,10 @@ export default{
 @import '@/assets/styles/global.scss';
   .icons /deep/ .swiper-wrapper{
       height:0;
-    padding-bottom:50%;
+      padding-bottom:50%;
+  }
+  .icons /deep/ .swiper-pagination-bullet-active{
+    background: $bgColor;
   }
 
  .icons{
