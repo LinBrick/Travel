@@ -105,12 +105,14 @@ export default{
 
  .icons{
    overflow:hidden;
+   background-color: #fff;
+   padding-top:rem(10px);
    .icon{
      overflow:hidden;
      float:left;
      width:25%;
      height:0;
-     padding-bottom:25%;
+     padding-bottom:23%;
      position: relative;
      .icon-img{
        position: absolute;
