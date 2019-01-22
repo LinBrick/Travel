@@ -1,6 +1,13 @@
 $bgColor:#00bcd4;
+$darkTextColor:#333;
 
 @function rem($px){
     $base:50px;
     @return $px / $base + rem;
+}
+
+@mixin ellipsis(){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
