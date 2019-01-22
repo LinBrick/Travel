@@ -1,20 +1,8 @@
 <template>
     <div class="wrapper">
         <swiper :options="swiperOption" ref="mySwiper">
-        <swiper-slide>
-            <img class="swiper-img" src="@/assets/images/banner1.jpg" />
-        </swiper-slide>
-        <swiper-slide>
-            <img class="swiper-img" src="@/assets/images/banner2.jpg" />
-        </swiper-slide>
-        <swiper-slide>
-            <img class="swiper-img" src="@/assets/images/banner3.jpg" />
-        </swiper-slide>
-        <swiper-slide>
-            <img class="swiper-img" src="@/assets/images/banner4.jpg" />
-        </swiper-slide>
-        <swiper-slide>
-            <img class="swiper-img" src="@/assets/images/banner5.jpg" />
+        <swiper-slide v-for="item in swiperList" :key="item.id">
+            <img class="swiper-img" :src="item.url" />
         </swiper-slide>
         <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
@@ -29,7 +17,29 @@ export default{
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true
-      }
+      },
+      swiperList: [
+        {
+          id: '000000001',
+          url: require('@/assets/images/banner1.jpg')
+        },
+        {
+          id: '000000002',
+          url: require('@/assets/images/banner2.jpg')
+        },
+        {
+          id: '000000003',
+          url: require('@/assets/images/banner3.jpg')
+        },
+        {
+          id: '000000004',
+          url: require('@/assets/images/banner4.jpg')
+        },
+        {
+          id: '000000005',
+          url: require('@/assets/images/banner5.jpg')
+        }
+      ]
     }
   }
 }
