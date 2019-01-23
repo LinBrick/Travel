@@ -1,16 +1,33 @@
 <template>
     <div class="recommend">
         <div class="recommend-title">
-            <img class="recommend-title-img" src="http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png" alt="猜你喜欢">
+            <span class="iconfont recommend-icon-heart">&#xe703;</span>
             <span class="recommend-title-text">猜你喜欢</span>
         </div>
         <ul>
             <li class="item">
-                <img class="item-img" src="http://img1.qunarzz.com/sight/p0/201405/27/ef08b0cb4a5afb2f570e5c4dff5f743e.jpg_200x200_f3ad8918.jpg" />
+                <div class="item-left">
+                    <img class="item-img" src="http://img1.qunarzz.com/sight/p0/201405/27/ef08b0cb4a5afb2f570e5c4dff5f743e.jpg_200x200_f3ad8918.jpg" />
+                </div>
+                <div class="item-tag">随买随用</div>
                 <div class="item-info">
                     <p class="item-title">长隆国际大马戏剧院</p>
-                    <p class="item-desc">30206条评论</p>
-                    <p class="item-price">￥299起</p>
+                    <p class="item-desc">
+                        <span class="item-score">
+                            <i class="iconfont item-icon-star">&#xe614;</i>
+                            <i class="iconfont item-icon-star">&#xe614;</i>
+                            <i class="iconfont item-icon-star">&#xe614;</i>
+                            <i class="iconfont item-icon-star">&#xe614;</i>
+                            <i class="iconfont item-icon-star">&#xe614;</i>
+                        </span>
+                        <span class="item-comments">30206条评论</span>
+                    </p>
+                    <p class="item-price">
+                        <span class="item-unit-price">￥
+                            <em class="item-num">299.9</em>
+                        </span>起
+                        <span class="item-address">广州长隆...</span>
+                    </p>
                 </div>
             </li>
         </ul>
@@ -31,6 +48,9 @@ export default {
     .recommend-title{
         padding:rem(16px) 0;
         text-indent:rem(15px); 
+        .recommend-icon-heart{
+            color:rgb(255, 101, 77);
+        }
         .recommend-title-img{
             display: inline-block;
             vertical-align: top;
@@ -44,16 +64,86 @@ export default {
     }
     .item{
         display: flex;
-        height:rem(137.6px);
+        height:rem(120px);
         overflow:hidden;
-        .item-img{
+        position: relative;
+        border-bottom: 1px solid #e0e0e0;
+        .item-left{
             width:rem(100px);
             height:rem(100px);
             padding:rem(10px);
+            .item-img{
+                width:100%;
+                height:100%;
+            }
+        }
+        .item-tag{
+            position:absolute;
+            top:rem(10px);
+            left:rem(10px);
+            width:rem(53px);
+            height:rem(20px);
+            color: #fff;
+            font-size:rem(9px);
+            line-height:rem(20px);
+            background-image:url(https://img1.qunarzz.com/piao/fusion/1802/20/2ba6d10b17972e02.png);
+            text-indent:rem(3px);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
         }
         .item-info{
             flex:1;
-            padding:rem(10px) 0;
+            .item-title{
+                margin-top:rem(26px);
+                height:rem(22px);
+                color:#212121;
+                font-size:rem(16px);
+                @include ellipsis();
+            }
+            .item-desc{
+                height:rem(17px);
+                line-height:rem(17px);
+                .item-score{
+                    width:rem(82.5px);
+                    height:rem(17px);
+                    line-height:rem(17px);
+                    display: inline-block;
+                    position: relative;
+                    .item-icon-star{
+                        font-size:rem(10px);
+                        color:#ffb436;
+                        margin-right:rem(-3px);
+                    }
+                    .item-comments{
+                        color: #616161;
+                        font-size: rem(12px);
+                        line-height: rem(17px);
+                        vertical-align: text-bottom;
+                    }
+                }
+                
+            }
+            .item-price{
+                color: #616161;
+                font-size:rem(12px);
+                margin-top:rem(10px);
+                position:relative;
+                .item-unit-price{
+                    line-height:rem(20px);
+                    font-size:rem(12px);
+                    color: #ff8300;
+                }
+                .item-num{
+                    font-size:rem(20px);
+                    margin-left:rem(-6px);
+                }
+                .item-address{
+                    position:absolute;
+                    right:rem(12px);
+                    bottom:0;
+                }
+            }
+            
         }
     }
 }
