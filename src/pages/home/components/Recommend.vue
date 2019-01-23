@@ -5,13 +5,13 @@
             <span class="recommend-title-text">猜你喜欢</span>
         </div>
         <ul>
-            <li class="item">
+            <li class="item" v-for="item in itemList" :key="item.id">
                 <div class="item-left">
-                    <img class="item-img" src="http://img1.qunarzz.com/sight/p0/201405/27/ef08b0cb4a5afb2f570e5c4dff5f743e.jpg_200x200_f3ad8918.jpg" />
+                    <img class="item-img" :src="item.imgUlr" />
                 </div>
-                <div class="item-tag">随买随用</div>
+                <div class="item-tag">{{item.tagName}}</div>
                 <div class="item-info">
-                    <p class="item-title">长隆国际大马戏剧院</p>
+                    <p class="item-title">{{item.title}}</p>
                     <p class="item-desc">
                         <span class="item-score">
                             <i class="iconfont item-icon-star">&#xe614;</i>
@@ -20,13 +20,13 @@
                             <i class="iconfont item-icon-star">&#xe614;</i>
                             <i class="iconfont item-icon-star">&#xe614;</i>
                         </span>
-                        <span class="item-comments">30206条评论</span>
+                        <span class="item-comments">{{item.commentNumber}}条评论</span>
                     </p>
                     <p class="item-price">
                         <span class="item-unit-price">￥
-                            <em class="item-num">299.9</em>
+                            <em class="item-num">{{item.price}}</em>
                         </span>起
-                        <span class="item-address">广州长隆...</span>
+                        <span class="item-address">{{item.address}}</span>
                     </p>
                 </div>
             </li>
@@ -36,7 +36,67 @@
 
 <script>
 export default {
-  name: 'HomeRecommend'
+  name: 'HomeRecommend',
+  data() {
+    return {
+      itemList: [
+        {
+          id: '000000000000001',
+          imgUlr: require('@/assets/images/recommend1.jpg'),
+          title: '长隆国际大马戏剧院',
+          tagName: '随买随用',
+          commentNumber: 30206,
+          price: 299.9,
+          address: '广州长隆...'
+        },
+        {
+          id: '000000000000002',
+          imgUlr: require('@/assets/images/recommend2.jpg'),
+          title: '长隆野生动物世界',
+          tagName: '随买随用',
+          commentNumber: 89268,
+          price: 209.9,
+          address: '广州长隆...'
+        },
+        {
+          id: '000000000000003',
+          imgUlr: require('@/assets/images/recommend3.jpg'),
+          title: '长隆欢乐世界',
+          tagName: '随买随用',
+          commentNumber: 48815,
+          price: 173.1,
+          address: '广州长隆...'
+        },
+        {
+          id: '000000000000004',
+          imgUlr: require('@/assets/images/recommend4.jpg'),
+          title: '广州长隆旅游度假区',
+          tagName: '随买随用',
+          commentNumber: 46332,
+          price: 69,
+          address: '广州长隆...'
+        },
+        {
+          id: '000000000000005',
+          imgUlr: require('@/assets/images/recommend5.jpg'),
+          title: '碧水湾温泉度假村',
+          tagName: '随买随用',
+          commentNumber: 1790,
+          price: 95,
+          address: '从化市'
+        },
+        {
+          id: '000000000000006',
+          imgUlr: require('@/assets/images/recommend6.jpg'),
+          title: '都喜泰丽温泉度假酒店',
+          tagName: '随买随用',
+          commentNumber: 578,
+          price: 148,
+          address: '从化市'
+        }
+      ]
+    }
+  }
 }
 </script>
 
