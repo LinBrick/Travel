@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="my-page">
         <home-header :city="city"></home-header>
         <home-swiper :list="swiperList"></home-swiper>
         <home-icons :list="iconList"></home-icons>
@@ -56,6 +56,8 @@ export default {
 </script>
 
 <style>
-
+.my-page{
+  background:#f5f5f5;
+}
 </style>
 
