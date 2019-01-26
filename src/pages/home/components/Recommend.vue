@@ -5,7 +5,7 @@
             <span class="recommend-title-text">猜你喜欢</span>
         </div>
         <ul>
-            <li class="item" v-for="item in itemList" :key="item.id">
+            <li class="item" v-for="item in list" :key="item.id">
                 <div class="item-left">
                     <img class="item-img" :src="item.imgUlr" />
                 </div>
@@ -37,65 +37,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data() {
-    return {
-      itemList: [
-        {
-          id: '000000000000001',
-          imgUlr: require('@/assets/images/recommend1.jpg'),
-          title: '长隆国际大马戏剧院',
-          tagName: '随买随用',
-          commentNumber: 30206,
-          price: 299.9,
-          address: '广州长隆...'
-        },
-        {
-          id: '000000000000002',
-          imgUlr: require('@/assets/images/recommend2.jpg'),
-          title: '长隆野生动物世界',
-          tagName: '随买随用',
-          commentNumber: 89268,
-          price: 209.9,
-          address: '广州长隆...'
-        },
-        {
-          id: '000000000000003',
-          imgUlr: require('@/assets/images/recommend3.jpg'),
-          title: '长隆欢乐世界',
-          tagName: '随买随用',
-          commentNumber: 48815,
-          price: 173.1,
-          address: '广州长隆...'
-        },
-        {
-          id: '000000000000004',
-          imgUlr: require('@/assets/images/recommend4.jpg'),
-          title: '广州长隆旅游度假区',
-          tagName: '随买随用',
-          commentNumber: 46332,
-          price: 69,
-          address: '广州长隆...'
-        },
-        {
-          id: '000000000000005',
-          imgUlr: require('@/assets/images/recommend5.jpg'),
-          title: '碧水湾温泉度假村',
-          tagName: '随买随用',
-          commentNumber: 1790,
-          price: 95,
-          address: '从化市'
-        },
-        {
-          id: '000000000000006',
-          imgUlr: require('@/assets/images/recommend6.jpg'),
-          title: '都喜泰丽温泉度假酒店',
-          tagName: '随买随用',
-          commentNumber: 578,
-          price: 148,
-          address: '从化市'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
