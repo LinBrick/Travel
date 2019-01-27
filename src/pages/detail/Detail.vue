@@ -55,9 +55,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/styles/global.scss';
-.content{
-    height:rem(2000px);
-}
+// @import '@/assets/styles/global.scss';
+// .content{
+//     height:rem(2000px);
+// }
 </style>
 
