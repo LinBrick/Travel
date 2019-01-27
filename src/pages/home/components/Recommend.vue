@@ -5,7 +5,7 @@
             <span class="recommend-title-text">猜你喜欢</span>
         </div>
         <ul>
-            <li class="item" v-for="item in list" :key="item.id">
+            <router-link tag="li" class="item" v-for="item in list" :key="item.id" :to="'/detail/' + item.id">
                 <div class="item-left">
                     <img class="item-img" :src="item.imgUlr" />
                 </div>
@@ -29,7 +29,7 @@
                         <span class="item-address">{{item.address}}</span>
                     </p>
                 </div>
-            </li>
+            </router-link>
         </ul>
     </div>
 </template>
