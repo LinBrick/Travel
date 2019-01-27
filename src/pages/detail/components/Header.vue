@@ -64,6 +64,7 @@ export default {
     }
 }
 .header-fixed{
+    z-index: 2;
     width:100%;
     position: fixed;
     top: 0;
