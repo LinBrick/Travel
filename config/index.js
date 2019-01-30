@@ -11,18 +11,18 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      // '/api': {// 开发
-      //   target: 'http://localhost:8080',
-      //   pathRewrite: {
-      //     '^/api': '/static/mock'
-      //   }
-      // },
-      '/api': {// 打包上线
-        target: 'https://ll527563266.github.io/Travel',
+      '/api': {// 开发
+        target: 'http://localhost:8080',
         pathRewrite: {
           '^/api': '/static/mock'
         }
       }
+      // '/api': {// 打包上线
+      //   target: 'https://ll527563266.github.io/Travel',
+      //   pathRewrite: {
+      //     '^/api': '/static/mock'
+      //   }
+      // }
     },
 
     // Various Dev Server settings
