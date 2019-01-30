@@ -12,7 +12,7 @@ import CityHeader from './components/Header'
 import CitySearch from './components/Search'
 import CityList from './components/List'
 import CityAlphabet from './components/Alphabet'
-import axios from 'axios'
+import request from '@/utils/request'
 
 export default {
   name: 'City',
@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     getCityInfo() {
-      axios.get('/api/city.json')
+      request.get('/city.json')
         .then(result => {
           result = result.data
           if (result.ret && result.data) {
